@@ -56,14 +56,48 @@
 <form action="action_page.php" method="GET" target="_blank" accept-charset="UTF-8"
 ectype="application/x-www-form-urlencoded" autocomplete="off" novalidate>
     choose:<br>
-    <input type="text" name="choose"><br>
+    <input type="text" id="email" name="choose"><br>
     <input type="date" name="day"><br>
     <input type="submit" value="submit">
 </form>
 <br><br><br>
 <button type="button" onclick="alert('Hello World!')">这是一个按钮</button>
 
+<!-- HTML结构 -->
+<div id="test-div">
+    <div class="c-red">
+        <p id="test-p">JavaScript</p>
+        <p>Java</p>
+      </div>
+      <div class="c-red c-green">
+        <p>Python</p>
+        <p>Ruby</p>
+        <p>Swift</p>
+      </div>
+      <div class="c-green">
+        <p>Scheme</p>
+        <p>Haskell</p>
+    </div>
+</div>
 
+<!-- HTML输入账号密码 并用MD5加密 -->
+<form id="login-form" method="post" onsubmit="return checkForm()">
+    <input type="text" id="username" name="username">
+    <input type="password" id="input-password">
+    <input type="hidden" id="md5-password" name="password">
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+function checkForm() {
+    var input_pwd = document.getElementById('input-password');
+    var md5_pwd = document.getElementById('md5-password');
+    // 把用户输入的明文变为MD5:
+    md5_pwd.value = toMD5(input_pwd.value);
+    // 继续下一步:
+    return true;
+}
+</script>
 
 <!--随便写的-->
 <h6 style="text-align:end">
@@ -92,6 +126,7 @@ ectype="application/x-www-form-urlencoded" autocomplete="off" novalidate>
         <td>row 2, cell 2</td>
     </tr>
 </table>
+
 
 
 <ul>
