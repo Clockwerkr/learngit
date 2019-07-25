@@ -1,2 +1,4 @@
 开发日记：
     第一天：git的学习与使用
+    Git is a distributed version control system.
+    Git is free software.
